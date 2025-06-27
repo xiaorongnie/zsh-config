@@ -111,6 +111,9 @@ echo -e "${GREEN}<<< 插件检查完成${NC}\n"
 # 4. 检查并配置.zshrc
 echo -e "${YELLOW}>>> 检查.zshrc配置...${NC}"
 
+# 定义统一的插件列表
+OH_MY_ZSH_PLUGINS="git z docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-motd"
+
 config_block_exists() {
     grep -q "# ===== ZSH CONFIG BLOCK =====" ~/.zshrc
 }
@@ -125,7 +128,7 @@ if [ -f ~/.zshrc ]; then
 # 由安装脚本自动添加
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="random"
-plugins=(git z docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-motd)
+plugins=($OH_MY_ZSH_PLUGINS)
 source $ZSH/oh-my-zsh.sh
 # ===== END OF CONFIG BLOCK =====
 EOL
@@ -139,7 +142,7 @@ else
 # ===== ZSH CONFIG BLOCK =====
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="random"
-plugins=(git z docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-motd)
+plugins=($OH_MY_ZSH_PLUGINS)
 source $ZSH/oh-my-zsh.sh
 # ===== END OF CONFIG BLOCK =====
 EOL
