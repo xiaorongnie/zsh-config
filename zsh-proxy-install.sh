@@ -105,6 +105,7 @@ install_plugin() {
 
 install_plugin "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions.git"
 install_plugin "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+install_plugin "zsh-motd" "https://github.com/xiaorongnie/zsh-motd.git"
 echo -e "${GREEN}<<< 插件检查完成${NC}\n"
 
 # 4. 检查并配置.zshrc
