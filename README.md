@@ -1,6 +1,7 @@
 # zsh-config
 
 推荐使用代理安装
+vscode自定义ssh快捷方式 D:\SoftWare\VSCode-win32-x64-1.98.0\Code.exe --user-data-dir "D:\vscode\ssh\user-data" --extensions-dir "D:\vscode\ssh\extensions"
 ```
 ssh -v -R 7890:localhost:7890 tg.xxx
 export http_proxy=http://127.0.0.1:7890
